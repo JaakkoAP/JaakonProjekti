@@ -9,9 +9,9 @@
 		<class>model.ProjectStudent</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/e1401180"/>
-			<property name="javax.persistence.jdbc.user" value="sqladmin"/>
+			<property name="javax.persistence.jdbc.user" value="dbuser"/>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-			<property name="javax.persistence.jdbc.password" value="!MazerDuriel2011"/>
+			<property name="javax.persistence.jdbc.password" value="dbpass"/>
 		</properties>
 	</persistence-unit>
 </persistence>

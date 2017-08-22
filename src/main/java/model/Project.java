@@ -33,9 +33,9 @@ public class Project
 	{
 		description = desc;
 	}
-	public boolean setAvailability()
+	public void setAvailability(boolean available)
 	{
-		return open_for_students;
+		open_for_students = available;
 	}
 	
 	public int getId()

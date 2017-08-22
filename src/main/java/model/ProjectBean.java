@@ -28,7 +28,7 @@ public class ProjectBean {
 	{
 		entityManager.getTransaction().begin();
 		Query query = entityManager.createNamedQuery("Project.findAll");
-		List<Project> result = query.getResultList();
+		List<Project> result = (List<Project>) query.getResultList();
 		entityManager.getTransaction().commit();
 		return result;
 	}
@@ -46,5 +46,14 @@ public class ProjectBean {
 		bean = entityManager.find(Project.class, beanNumber);
 		if(bean == null) throw new IllegalStateException("Bean number " + beanNumber + " not found.");
 	}
-	
+
+	public void update(String corp, String email, String desc, boolean availability)
+	{
+		entityManager.getTransaction().begin();
+		bean.setCorporation(corp);
+		bean.setEmail(email);
+		bean.setDescription(desc);
+		bean.setAvailability(availability);
+		entityManager.getTransaction().commit();
+	}
 }
